@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **fulfilment_order_id** | **int** |  | 
 **customer_order_id** | **string** |  | 
 **created_at** | **string** |  | 
+**gln** | **string** |  | [optional] 
 **units** | [**\SMS\Suppliers\Model\v2\GetFulfilmentOrderUnitResponse[]**](GetFulfilmentOrderUnitResponse.md) |  | 
 **shipment_data** | [**\SMS\Suppliers\Model\v2\ShipmentData[]**](ShipmentData.md) |  | [optional] 
 **shipment_address** | [**\SMS\Suppliers\Model\v2\ShipmentAddress**](ShipmentAddress.md) |  | 

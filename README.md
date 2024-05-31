@@ -136,6 +136,8 @@ Class | Method | HTTP request | Description
 
  - [BadRequestResponse](docs/Model/BadRequestResponse.md)
  - [CancelOrderUnitRequest](docs/Model/CancelOrderUnitRequest.md)
+ - [Carrier](docs/Model/Carrier.md)
+ - [CarrierService](docs/Model/CarrierService.md)
  - [CreateImportRequest](docs/Model/CreateImportRequest.md)
  - [CreateInventoryUnitRequest](docs/Model/CreateInventoryUnitRequest.md)
  - [CreateInventoryUnitResponse](docs/Model/CreateInventoryUnitResponse.md)
@@ -197,6 +199,8 @@ Class | Method | HTTP request | Description
 
  - [BadRequestResponse](docs/Model/v2/BadRequestResponse.md)
  - [CancelOrderUnitRequest](docs/Model/v2/CancelOrderUnitRequest.md)
+ - [Carrier](docs/Model/v2/Carrier.md)
+ - [CarrierService](docs/Model/v2/CarrierService.md)
  - [CreateImportRequest](docs/Model/v2/CreateImportRequest.md)
  - [CreateInventoryCountryValuesRequest](docs/Model/v2/CreateInventoryCountryValuesRequest.md)
  - [CreateInventoryUnitRequest](docs/Model/v2/CreateInventoryUnitRequest.md)

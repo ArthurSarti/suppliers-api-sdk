@@ -59,6 +59,7 @@ class GetFulfilmentOrderResponse implements ModelInterface, ArrayAccess
         'fulfilment_order_id' => 'int',
         'customer_order_id' => 'string',
         'created_at' => 'string',
+        'gln' => 'string',
         'units' => '\SMS\Suppliers\Model\v2\GetFulfilmentOrderUnitResponse[]',
         'shipment_data' => '\SMS\Suppliers\Model\v2\ShipmentData[]',
         'shipment_address' => '\SMS\Suppliers\Model\v2\ShipmentAddress'
@@ -73,6 +74,7 @@ class GetFulfilmentOrderResponse implements ModelInterface, ArrayAccess
         'fulfilment_order_id' => null,
         'customer_order_id' => null,
         'created_at' => null,
+        'gln' => null,
         'units' => null,
         'shipment_data' => null,
         'shipment_address' => null
@@ -108,6 +110,7 @@ class GetFulfilmentOrderResponse implements ModelInterface, ArrayAccess
         'fulfilment_order_id' => 'fulfilment_order_id',
         'customer_order_id' => 'customer_order_id',
         'created_at' => 'created_at',
+        'gln' => 'gln',
         'units' => 'units',
         'shipment_data' => 'shipment_data',
         'shipment_address' => 'shipment_address'
@@ -122,6 +125,7 @@ class GetFulfilmentOrderResponse implements ModelInterface, ArrayAccess
         'fulfilment_order_id' => 'setFulfilmentOrderId',
         'customer_order_id' => 'setCustomerOrderId',
         'created_at' => 'setCreatedAt',
+        'gln' => 'setGln',
         'units' => 'setUnits',
         'shipment_data' => 'setShipmentData',
         'shipment_address' => 'setShipmentAddress'
@@ -136,6 +140,7 @@ class GetFulfilmentOrderResponse implements ModelInterface, ArrayAccess
         'fulfilment_order_id' => 'getFulfilmentOrderId',
         'customer_order_id' => 'getCustomerOrderId',
         'created_at' => 'getCreatedAt',
+        'gln' => 'getGln',
         'units' => 'getUnits',
         'shipment_data' => 'getShipmentData',
         'shipment_address' => 'getShipmentAddress'
@@ -204,6 +209,7 @@ class GetFulfilmentOrderResponse implements ModelInterface, ArrayAccess
         $this->container['fulfilment_order_id'] = isset($data['fulfilment_order_id']) ? $data['fulfilment_order_id'] : null;
         $this->container['customer_order_id'] = isset($data['customer_order_id']) ? $data['customer_order_id'] : null;
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['gln'] = isset($data['gln']) ? $data['gln'] : null;
         $this->container['units'] = isset($data['units']) ? $data['units'] : null;
         $this->container['shipment_data'] = isset($data['shipment_data']) ? $data['shipment_data'] : null;
         $this->container['shipment_address'] = isset($data['shipment_address']) ? $data['shipment_address'] : null;
@@ -316,6 +322,30 @@ class GetFulfilmentOrderResponse implements ModelInterface, ArrayAccess
     public function setCreatedAt($created_at)
     {
         $this->container['created_at'] = $created_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets gln
+     *
+     * @return string
+     */
+    public function getGln()
+    {
+        return $this->container['gln'];
+    }
+
+    /**
+     * Sets gln
+     *
+     * @param string $gln gln
+     *
+     * @return $this
+     */
+    public function setGln($gln)
+    {
+        $this->container['gln'] = $gln;
 
         return $this;
     }

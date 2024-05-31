@@ -18,6 +18,8 @@ Name | Type | Description | Notes
 **supplier_item_id** | **string** | Supplier Item ID | 
 **reverse_charge** | **int** | Reverse charge | [optional] 
 **origin_manufacturer_country** | **string** | Origin Manufacturer Country of the unit (in ISO-Alpha2 Format) | [optional] 
+**carrier** | [**\SMS\Suppliers\Model\Carrier**](Carrier.md) |  | [optional] 
+**carrier_service** | [**\SMS\Suppliers\Model\CarrierService**](CarrierService.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

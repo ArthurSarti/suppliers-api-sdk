@@ -63,7 +63,9 @@ class GetInventoryUnitCountryValueResponse implements ModelInterface, ArrayAcces
         'handling_costs' => 'float',
         'return_shipping_costs' => 'float',
         'delivery_min_time' => 'int',
-        'delivery_max_time' => 'int'
+        'delivery_max_time' => 'int',
+        'carrier' => '\SMS\Suppliers\Model\v2\Carrier',
+        'carrier_service' => '\SMS\Suppliers\Model\v2\CarrierService'
     ];
 
     /**
@@ -79,7 +81,9 @@ class GetInventoryUnitCountryValueResponse implements ModelInterface, ArrayAcces
         'handling_costs' => 'float',
         'return_shipping_costs' => 'float',
         'delivery_min_time' => 'int64',
-        'delivery_max_time' => 'int64'
+        'delivery_max_time' => 'int64',
+        'carrier' => null,
+        'carrier_service' => null
     ];
 
     /**
@@ -116,7 +120,9 @@ class GetInventoryUnitCountryValueResponse implements ModelInterface, ArrayAcces
         'handling_costs' => 'handling_costs',
         'return_shipping_costs' => 'return_shipping_costs',
         'delivery_min_time' => 'delivery_min_time',
-        'delivery_max_time' => 'delivery_max_time'
+        'delivery_max_time' => 'delivery_max_time',
+        'carrier' => 'carrier',
+        'carrier_service' => 'carrier_service'
     ];
 
     /**
@@ -132,7 +138,9 @@ class GetInventoryUnitCountryValueResponse implements ModelInterface, ArrayAcces
         'handling_costs' => 'setHandlingCosts',
         'return_shipping_costs' => 'setReturnShippingCosts',
         'delivery_min_time' => 'setDeliveryMinTime',
-        'delivery_max_time' => 'setDeliveryMaxTime'
+        'delivery_max_time' => 'setDeliveryMaxTime',
+        'carrier' => 'setCarrier',
+        'carrier_service' => 'setCarrierService'
     ];
 
     /**
@@ -148,7 +156,9 @@ class GetInventoryUnitCountryValueResponse implements ModelInterface, ArrayAcces
         'handling_costs' => 'getHandlingCosts',
         'return_shipping_costs' => 'getReturnShippingCosts',
         'delivery_min_time' => 'getDeliveryMinTime',
-        'delivery_max_time' => 'getDeliveryMaxTime'
+        'delivery_max_time' => 'getDeliveryMaxTime',
+        'carrier' => 'getCarrier',
+        'carrier_service' => 'getCarrierService'
     ];
 
     /**
@@ -219,6 +229,8 @@ class GetInventoryUnitCountryValueResponse implements ModelInterface, ArrayAcces
         $this->container['return_shipping_costs'] = isset($data['return_shipping_costs']) ? $data['return_shipping_costs'] : null;
         $this->container['delivery_min_time'] = isset($data['delivery_min_time']) ? $data['delivery_min_time'] : null;
         $this->container['delivery_max_time'] = isset($data['delivery_max_time']) ? $data['delivery_max_time'] : null;
+        $this->container['carrier'] = isset($data['carrier']) ? $data['carrier'] : null;
+        $this->container['carrier_service'] = isset($data['carrier_service']) ? $data['carrier_service'] : null;
     }
 
     /**
@@ -457,6 +469,54 @@ class GetInventoryUnitCountryValueResponse implements ModelInterface, ArrayAcces
     public function setDeliveryMaxTime($delivery_max_time)
     {
         $this->container['delivery_max_time'] = $delivery_max_time;
+
+        return $this;
+    }
+
+    /**
+     * Gets carrier
+     *
+     * @return \SMS\Suppliers\Model\v2\Carrier
+     */
+    public function getCarrier()
+    {
+        return $this->container['carrier'];
+    }
+
+    /**
+     * Sets carrier
+     *
+     * @param \SMS\Suppliers\Model\v2\Carrier $carrier carrier
+     *
+     * @return $this
+     */
+    public function setCarrier($carrier)
+    {
+        $this->container['carrier'] = $carrier;
+
+        return $this;
+    }
+
+    /**
+     * Gets carrier_service
+     *
+     * @return \SMS\Suppliers\Model\v2\CarrierService
+     */
+    public function getCarrierService()
+    {
+        return $this->container['carrier_service'];
+    }
+
+    /**
+     * Sets carrier_service
+     *
+     * @param \SMS\Suppliers\Model\v2\CarrierService $carrier_service carrier_service
+     *
+     * @return $this
+     */
+    public function setCarrierService($carrier_service)
+    {
+        $this->container['carrier_service'] = $carrier_service;
 
         return $this;
     }

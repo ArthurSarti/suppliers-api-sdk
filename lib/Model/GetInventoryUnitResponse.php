@@ -69,7 +69,9 @@ class GetInventoryUnitResponse implements ModelInterface, ArrayAccess
         'return_shipping_cost' => 'float',
         'delivery_min_time' => 'int',
         'delivery_max_time' => 'int',
-        'is_hauler_delivery' => 'bool'
+        'is_hauler_delivery' => 'bool',
+        'carrier' => '\SMS\Suppliers\Model\Carrier',
+        'carrier_service' => '\SMS\Suppliers\Model\CarrierService'
     ];
 
     /**
@@ -91,7 +93,9 @@ class GetInventoryUnitResponse implements ModelInterface, ArrayAccess
         'return_shipping_cost' => 'float',
         'delivery_min_time' => 'int64',
         'delivery_max_time' => 'int64',
-        'is_hauler_delivery' => null
+        'is_hauler_delivery' => null,
+        'carrier' => null,
+        'carrier_service' => null
     ];
 
     /**
@@ -134,7 +138,9 @@ class GetInventoryUnitResponse implements ModelInterface, ArrayAccess
         'return_shipping_cost' => 'return_shipping_cost',
         'delivery_min_time' => 'delivery_min_time',
         'delivery_max_time' => 'delivery_max_time',
-        'is_hauler_delivery' => 'is_hauler_delivery'
+        'is_hauler_delivery' => 'is_hauler_delivery',
+        'carrier' => 'carrier',
+        'carrier_service' => 'carrier_service'
     ];
 
     /**
@@ -156,7 +162,9 @@ class GetInventoryUnitResponse implements ModelInterface, ArrayAccess
         'return_shipping_cost' => 'setReturnShippingCost',
         'delivery_min_time' => 'setDeliveryMinTime',
         'delivery_max_time' => 'setDeliveryMaxTime',
-        'is_hauler_delivery' => 'setIsHaulerDelivery'
+        'is_hauler_delivery' => 'setIsHaulerDelivery',
+        'carrier' => 'setCarrier',
+        'carrier_service' => 'setCarrierService'
     ];
 
     /**
@@ -178,7 +186,9 @@ class GetInventoryUnitResponse implements ModelInterface, ArrayAccess
         'return_shipping_cost' => 'getReturnShippingCost',
         'delivery_min_time' => 'getDeliveryMinTime',
         'delivery_max_time' => 'getDeliveryMaxTime',
-        'is_hauler_delivery' => 'getIsHaulerDelivery'
+        'is_hauler_delivery' => 'getIsHaulerDelivery',
+        'carrier' => 'getCarrier',
+        'carrier_service' => 'getCarrierService'
     ];
 
     /**
@@ -276,6 +286,8 @@ class GetInventoryUnitResponse implements ModelInterface, ArrayAccess
         $this->container['delivery_min_time'] = isset($data['delivery_min_time']) ? $data['delivery_min_time'] : null;
         $this->container['delivery_max_time'] = isset($data['delivery_max_time']) ? $data['delivery_max_time'] : null;
         $this->container['is_hauler_delivery'] = isset($data['is_hauler_delivery']) ? $data['is_hauler_delivery'] : null;
+        $this->container['carrier'] = isset($data['carrier']) ? $data['carrier'] : null;
+        $this->container['carrier_service'] = isset($data['carrier_service']) ? $data['carrier_service'] : null;
     }
 
     /**
@@ -684,6 +696,54 @@ class GetInventoryUnitResponse implements ModelInterface, ArrayAccess
     public function setIsHaulerDelivery($is_hauler_delivery)
     {
         $this->container['is_hauler_delivery'] = $is_hauler_delivery;
+
+        return $this;
+    }
+
+    /**
+     * Gets carrier
+     *
+     * @return \SMS\Suppliers\Model\Carrier
+     */
+    public function getCarrier()
+    {
+        return $this->container['carrier'];
+    }
+
+    /**
+     * Sets carrier
+     *
+     * @param \SMS\Suppliers\Model\Carrier $carrier carrier
+     *
+     * @return $this
+     */
+    public function setCarrier($carrier)
+    {
+        $this->container['carrier'] = $carrier;
+
+        return $this;
+    }
+
+    /**
+     * Gets carrier_service
+     *
+     * @return \SMS\Suppliers\Model\CarrierService
+     */
+    public function getCarrierService()
+    {
+        return $this->container['carrier_service'];
+    }
+
+    /**
+     * Sets carrier_service
+     *
+     * @param \SMS\Suppliers\Model\CarrierService $carrier_service carrier_service
+     *
+     * @return $this
+     */
+    public function setCarrierService($carrier_service)
+    {
+        $this->container['carrier_service'] = $carrier_service;
 
         return $this;
     }

@@ -70,7 +70,9 @@ class CreateInventoryUnitRequest implements ModelInterface, ArrayAccess
         'is_hauler_delivery' => 'bool',
         'supplier_item_id' => 'string',
         'reverse_charge' => 'int',
-        'origin_manufacturer_country' => 'string'
+        'origin_manufacturer_country' => 'string',
+        'carrier' => '\SMS\Suppliers\Model\Carrier',
+        'carrier_service' => '\SMS\Suppliers\Model\CarrierService'
     ];
 
     /**
@@ -93,7 +95,9 @@ class CreateInventoryUnitRequest implements ModelInterface, ArrayAccess
         'is_hauler_delivery' => null,
         'supplier_item_id' => null,
         'reverse_charge' => null,
-        'origin_manufacturer_country' => null
+        'origin_manufacturer_country' => null,
+        'carrier' => null,
+        'carrier_service' => null
     ];
 
     /**
@@ -137,7 +141,9 @@ class CreateInventoryUnitRequest implements ModelInterface, ArrayAccess
         'is_hauler_delivery' => 'is_hauler_delivery',
         'supplier_item_id' => 'supplier_item_id',
         'reverse_charge' => 'reverse_charge',
-        'origin_manufacturer_country' => 'origin_manufacturer_country'
+        'origin_manufacturer_country' => 'origin_manufacturer_country',
+        'carrier' => 'carrier',
+        'carrier_service' => 'carrier_service'
     ];
 
     /**
@@ -160,7 +166,9 @@ class CreateInventoryUnitRequest implements ModelInterface, ArrayAccess
         'is_hauler_delivery' => 'setIsHaulerDelivery',
         'supplier_item_id' => 'setSupplierItemId',
         'reverse_charge' => 'setReverseCharge',
-        'origin_manufacturer_country' => 'setOriginManufacturerCountry'
+        'origin_manufacturer_country' => 'setOriginManufacturerCountry',
+        'carrier' => 'setCarrier',
+        'carrier_service' => 'setCarrierService'
     ];
 
     /**
@@ -183,7 +191,9 @@ class CreateInventoryUnitRequest implements ModelInterface, ArrayAccess
         'is_hauler_delivery' => 'getIsHaulerDelivery',
         'supplier_item_id' => 'getSupplierItemId',
         'reverse_charge' => 'getReverseCharge',
-        'origin_manufacturer_country' => 'getOriginManufacturerCountry'
+        'origin_manufacturer_country' => 'getOriginManufacturerCountry',
+        'carrier' => 'getCarrier',
+        'carrier_service' => 'getCarrierService'
     ];
 
     /**
@@ -282,6 +292,8 @@ class CreateInventoryUnitRequest implements ModelInterface, ArrayAccess
         $this->container['supplier_item_id'] = isset($data['supplier_item_id']) ? $data['supplier_item_id'] : null;
         $this->container['reverse_charge'] = isset($data['reverse_charge']) ? $data['reverse_charge'] : null;
         $this->container['origin_manufacturer_country'] = isset($data['origin_manufacturer_country']) ? $data['origin_manufacturer_country'] : null;
+        $this->container['carrier'] = isset($data['carrier']) ? $data['carrier'] : null;
+        $this->container['carrier_service'] = isset($data['carrier_service']) ? $data['carrier_service'] : null;
     }
 
     /**
@@ -702,6 +714,54 @@ class CreateInventoryUnitRequest implements ModelInterface, ArrayAccess
     public function setOriginManufacturerCountry($origin_manufacturer_country)
     {
         $this->container['origin_manufacturer_country'] = $origin_manufacturer_country;
+
+        return $this;
+    }
+
+    /**
+     * Gets carrier
+     *
+     * @return \SMS\Suppliers\Model\Carrier
+     */
+    public function getCarrier()
+    {
+        return $this->container['carrier'];
+    }
+
+    /**
+     * Sets carrier
+     *
+     * @param \SMS\Suppliers\Model\Carrier $carrier carrier
+     *
+     * @return $this
+     */
+    public function setCarrier($carrier)
+    {
+        $this->container['carrier'] = $carrier;
+
+        return $this;
+    }
+
+    /**
+     * Gets carrier_service
+     *
+     * @return \SMS\Suppliers\Model\CarrierService
+     */
+    public function getCarrierService()
+    {
+        return $this->container['carrier_service'];
+    }
+
+    /**
+     * Sets carrier_service
+     *
+     * @param \SMS\Suppliers\Model\CarrierService $carrier_service carrier_service
+     *
+     * @return $this
+     */
+    public function setCarrierService($carrier_service)
+    {
+        $this->container['carrier_service'] = $carrier_service;
 
         return $this;
     }
