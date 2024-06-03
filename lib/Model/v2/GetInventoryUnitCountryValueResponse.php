@@ -64,8 +64,8 @@ class GetInventoryUnitCountryValueResponse implements ModelInterface, ArrayAcces
         'return_shipping_costs' => 'float',
         'delivery_min_time' => 'int',
         'delivery_max_time' => 'int',
-        'carrier' => '\SMS\Suppliers\Model\v2\Carrier',
-        'carrier_service' => '\SMS\Suppliers\Model\v2\CarrierService'
+        'carrier' => 'object',
+        'carrier_service' => 'object'
     ];
 
     /**
@@ -476,7 +476,7 @@ class GetInventoryUnitCountryValueResponse implements ModelInterface, ArrayAcces
     /**
      * Gets carrier
      *
-     * @return \SMS\Suppliers\Model\v2\Carrier
+     * @return object
      */
     public function getCarrier()
     {
@@ -486,7 +486,7 @@ class GetInventoryUnitCountryValueResponse implements ModelInterface, ArrayAcces
     /**
      * Sets carrier
      *
-     * @param \SMS\Suppliers\Model\v2\Carrier $carrier carrier
+     * @param object $carrier carrier
      *
      * @return $this
      */
@@ -500,7 +500,7 @@ class GetInventoryUnitCountryValueResponse implements ModelInterface, ArrayAcces
     /**
      * Gets carrier_service
      *
-     * @return \SMS\Suppliers\Model\v2\CarrierService
+     * @return object
      */
     public function getCarrierService()
     {
@@ -510,7 +510,7 @@ class GetInventoryUnitCountryValueResponse implements ModelInterface, ArrayAcces
     /**
      * Sets carrier_service
      *
-     * @param \SMS\Suppliers\Model\v2\CarrierService $carrier_service carrier_service
+     * @param object $carrier_service carrier_service
      *
      * @return $this
      */

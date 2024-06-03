@@ -71,8 +71,8 @@ class CreateInventoryUnitRequest implements ModelInterface, ArrayAccess
         'supplier_item_id' => 'string',
         'reverse_charge' => 'int',
         'origin_manufacturer_country' => 'string',
-        'carrier' => '\SMS\Suppliers\Model\Carrier',
-        'carrier_service' => '\SMS\Suppliers\Model\CarrierService'
+        'carrier' => 'object',
+        'carrier_service' => 'object'
     ];
 
     /**
@@ -721,7 +721,7 @@ class CreateInventoryUnitRequest implements ModelInterface, ArrayAccess
     /**
      * Gets carrier
      *
-     * @return \SMS\Suppliers\Model\Carrier
+     * @return object
      */
     public function getCarrier()
     {
@@ -731,7 +731,7 @@ class CreateInventoryUnitRequest implements ModelInterface, ArrayAccess
     /**
      * Sets carrier
      *
-     * @param \SMS\Suppliers\Model\Carrier $carrier carrier
+     * @param object $carrier carrier
      *
      * @return $this
      */
@@ -745,7 +745,7 @@ class CreateInventoryUnitRequest implements ModelInterface, ArrayAccess
     /**
      * Gets carrier_service
      *
-     * @return \SMS\Suppliers\Model\CarrierService
+     * @return object
      */
     public function getCarrierService()
     {
@@ -755,7 +755,7 @@ class CreateInventoryUnitRequest implements ModelInterface, ArrayAccess
     /**
      * Sets carrier_service
      *
-     * @param \SMS\Suppliers\Model\CarrierService $carrier_service carrier_service
+     * @param object $carrier_service carrier_service
      *
      * @return $this
      */

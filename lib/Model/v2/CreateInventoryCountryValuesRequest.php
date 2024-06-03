@@ -65,8 +65,8 @@ class CreateInventoryCountryValuesRequest implements ModelInterface, ArrayAccess
         'delivery_max_time' => 'int',
         'reverse_charge' => 'int',
         'currency' => 'string',
-        'carrier' => '\SMS\Suppliers\Model\v2\Carrier',
-        'carrier_service' => '\SMS\Suppliers\Model\v2\CarrierService'
+        'carrier' => 'object',
+        'carrier_service' => 'object'
     ];
 
     /**
@@ -500,7 +500,7 @@ class CreateInventoryCountryValuesRequest implements ModelInterface, ArrayAccess
     /**
      * Gets carrier
      *
-     * @return \SMS\Suppliers\Model\v2\Carrier
+     * @return object
      */
     public function getCarrier()
     {
@@ -510,7 +510,7 @@ class CreateInventoryCountryValuesRequest implements ModelInterface, ArrayAccess
     /**
      * Sets carrier
      *
-     * @param \SMS\Suppliers\Model\v2\Carrier $carrier carrier
+     * @param object $carrier carrier
      *
      * @return $this
      */
@@ -524,7 +524,7 @@ class CreateInventoryCountryValuesRequest implements ModelInterface, ArrayAccess
     /**
      * Gets carrier_service
      *
-     * @return \SMS\Suppliers\Model\v2\CarrierService
+     * @return object
      */
     public function getCarrierService()
     {
@@ -534,7 +534,7 @@ class CreateInventoryCountryValuesRequest implements ModelInterface, ArrayAccess
     /**
      * Sets carrier_service
      *
-     * @param \SMS\Suppliers\Model\v2\CarrierService $carrier_service carrier_service
+     * @param object $carrier_service carrier_service
      *
      * @return $this
      */
