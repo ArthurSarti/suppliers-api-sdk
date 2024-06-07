@@ -899,7 +899,7 @@ class InventoryUnitApi
      *
      * @throws \SMS\Suppliers\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return object
+     * @return \SMS\Suppliers\Model\v2\GetInventoryUnitResponse[]
      */
     public function getInventoryUnits($limit = '100', $page = '1')
     {
@@ -917,11 +917,11 @@ class InventoryUnitApi
      *
      * @throws \SMS\Suppliers\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of object, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SMS\Suppliers\Model\v2\GetInventoryUnitResponse[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getInventoryUnitsWithHttpInfo($limit = '100', $page = '1')
     {
-        $returnType = 'object';
+        $returnType = '\SMS\Suppliers\Model\v2\GetInventoryUnitResponse[]';
         $request = $this->getInventoryUnitsRequest($limit, $page);
 
         try {
@@ -973,7 +973,7 @@ class InventoryUnitApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\SMS\Suppliers\Model\v2\GetInventoryUnitResponse[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1025,7 +1025,7 @@ class InventoryUnitApi
      */
     public function getInventoryUnitsAsyncWithHttpInfo($limit = '100', $page = '1')
     {
-        $returnType = 'object';
+        $returnType = '\SMS\Suppliers\Model\v2\GetInventoryUnitResponse[]';
         $request = $this->getInventoryUnitsRequest($limit, $page);
 
         return $this->client

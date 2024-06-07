@@ -11,6 +11,8 @@ Name | Type | Description | Notes
 **return_shipping_costs** | **float** | Return costs | 
 **delivery_min_time** | **int** | Min delivery time in days | 
 **delivery_max_time** | **int** | Max delivery time in days | 
+**carrier** | **object** |  | [optional] 
+**carrier_service** | **object** |  | [optional] 
 
 [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to README]](../../../README.md)
 

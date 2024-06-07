@@ -14,6 +14,8 @@ Name | Type | Description | Notes
 **is_hauler_delivery** | **bool** | If this unit required a hauler delivery | [optional] 
 **reverse_charge** | **int** | Reverse charge | [optional] 
 **origin_manufacturer_country** | **string** | Origin Manufacturer Country of the unit (in ISO-Alpha2 Format) | [optional] 
+**carrier** | **object** |  | [optional] 
+**carrier_service** | **object** |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

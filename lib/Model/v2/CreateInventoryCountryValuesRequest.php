@@ -64,7 +64,9 @@ class CreateInventoryCountryValuesRequest implements ModelInterface, ArrayAccess
         'delivery_min_time' => 'int',
         'delivery_max_time' => 'int',
         'reverse_charge' => 'int',
-        'currency' => 'string'
+        'currency' => 'string',
+        'carrier' => 'object',
+        'carrier_service' => 'object'
     ];
 
     /**
@@ -81,7 +83,9 @@ class CreateInventoryCountryValuesRequest implements ModelInterface, ArrayAccess
         'delivery_min_time' => 'int64',
         'delivery_max_time' => 'int64',
         'reverse_charge' => null,
-        'currency' => null
+        'currency' => null,
+        'carrier' => null,
+        'carrier_service' => null
     ];
 
     /**
@@ -119,7 +123,9 @@ class CreateInventoryCountryValuesRequest implements ModelInterface, ArrayAccess
         'delivery_min_time' => 'delivery_min_time',
         'delivery_max_time' => 'delivery_max_time',
         'reverse_charge' => 'reverse_charge',
-        'currency' => 'currency'
+        'currency' => 'currency',
+        'carrier' => 'carrier',
+        'carrier_service' => 'carrier_service'
     ];
 
     /**
@@ -136,7 +142,9 @@ class CreateInventoryCountryValuesRequest implements ModelInterface, ArrayAccess
         'delivery_min_time' => 'setDeliveryMinTime',
         'delivery_max_time' => 'setDeliveryMaxTime',
         'reverse_charge' => 'setReverseCharge',
-        'currency' => 'setCurrency'
+        'currency' => 'setCurrency',
+        'carrier' => 'setCarrier',
+        'carrier_service' => 'setCarrierService'
     ];
 
     /**
@@ -153,7 +161,9 @@ class CreateInventoryCountryValuesRequest implements ModelInterface, ArrayAccess
         'delivery_min_time' => 'getDeliveryMinTime',
         'delivery_max_time' => 'getDeliveryMaxTime',
         'reverse_charge' => 'getReverseCharge',
-        'currency' => 'getCurrency'
+        'currency' => 'getCurrency',
+        'carrier' => 'getCarrier',
+        'carrier_service' => 'getCarrierService'
     ];
 
     /**
@@ -225,6 +235,8 @@ class CreateInventoryCountryValuesRequest implements ModelInterface, ArrayAccess
         $this->container['delivery_max_time'] = isset($data['delivery_max_time']) ? $data['delivery_max_time'] : null;
         $this->container['reverse_charge'] = isset($data['reverse_charge']) ? $data['reverse_charge'] : null;
         $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
+        $this->container['carrier'] = isset($data['carrier']) ? $data['carrier'] : null;
+        $this->container['carrier_service'] = isset($data['carrier_service']) ? $data['carrier_service'] : null;
     }
 
     /**
@@ -250,6 +262,9 @@ class CreateInventoryCountryValuesRequest implements ModelInterface, ArrayAccess
         }
         if ($this->container['delivery_max_time'] === null) {
             $invalidProperties[] = "'delivery_max_time' can't be null";
+        }
+        if ($this->container['reverse_charge'] === null) {
+            $invalidProperties[] = "'reverse_charge' can't be null";
         }
         return $invalidProperties;
     }
@@ -447,7 +462,7 @@ class CreateInventoryCountryValuesRequest implements ModelInterface, ArrayAccess
     /**
      * Sets reverse_charge
      *
-     * @param int $reverse_charge Reverse charge
+     * @param int $reverse_charge Reverse charge. If unknown use '0' as value.
      *
      * @return $this
      */
@@ -478,6 +493,54 @@ class CreateInventoryCountryValuesRequest implements ModelInterface, ArrayAccess
     public function setCurrency($currency)
     {
         $this->container['currency'] = $currency;
+
+        return $this;
+    }
+
+    /**
+     * Gets carrier
+     *
+     * @return object
+     */
+    public function getCarrier()
+    {
+        return $this->container['carrier'];
+    }
+
+    /**
+     * Sets carrier
+     *
+     * @param object $carrier carrier
+     *
+     * @return $this
+     */
+    public function setCarrier($carrier)
+    {
+        $this->container['carrier'] = $carrier;
+
+        return $this;
+    }
+
+    /**
+     * Gets carrier_service
+     *
+     * @return object
+     */
+    public function getCarrierService()
+    {
+        return $this->container['carrier_service'];
+    }
+
+    /**
+     * Sets carrier_service
+     *
+     * @param object $carrier_service carrier_service
+     *
+     * @return $this
+     */
+    public function setCarrierService($carrier_service)
+    {
+        $this->container['carrier_service'] = $carrier_service;
 
         return $this;
     }
