@@ -1,6 +1,6 @@
 {
     "name": "hitmeister/suppliers-api-sdk",
-    "version": "0.15.0",
+    "version": "0.15.1",
     "description": "Suppliers API SDK",
     "keywords": [
         "real.digital",
@@ -10,7 +10,7 @@
         "sdk",
         "api"
     ],
-    "homepage": "https://sms.kaufland.de/api/v1/specs/?url=/api/v2/specs/supplier_api.yaml",
+    "homepage": "https://sms.kaufland.de/public/api/docs/endpoints?url=/api/v2/specs/supplier_api.yaml",
     "license": "MIT",
     "authors": [
         {
